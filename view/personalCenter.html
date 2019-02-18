@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/personalCenter.css">
+
+
+</head>
+<body>
+<%-include header.html%>
+<div id="pc-box">
+    <header></header>
+    <section>
+        <h4>个人中心</h4>
+        <ul id="pc-ul">
+            <li id="p-data">个人资料</li>
+            <li id="p-addr">我的收货地址</li>
+            <li id="p-notorder">查看未完成商品订单</li>
+            <li id="p-allorder">查看全部商品订单</li>
+            <!--<li id="p-checkdoor">查看门店服务订单</li>-->
+            <li id="p-appraise">我的评价</li>
+            <li id="p-changepass">修改密码</li>
+            <li id="p-message">消息</li>
+        </ul>
+        <div id="pc-content">
+         <div id="def-message">
+             <img src="" id="def-img" height="333" width="500"/>
+             <p><span id="def-name"></span>(<span id="def-tel"></span>)<span id="def-revision">修改</span></p>
+             <ul id="def-ul">
+                 <li class="def-wpay">待付款 <span >(1)</span></li>
+                 <li class="def-wport">待发货<span ></span></li>
+                 <li class="def-wreceive">待收货<span ></span></li>
+                 <li class="def-appraise">待评价<span >(3)</span></li>
+                 <li class="def-refund">退款 <span></span></li>
+             </ul>
+         </div>
+            <div id="pd-box">
+                <header>
+                    个人资料
+                </header>
+                <section>
+                    <ul id="pd-ul">
+                        <!--<li>头像：<img src="" alt="" id="pd-img"></li>-->
+                        <li>
+                            <label for="pd-name">昵称：</label>
+                            <input type="text" id="pd-name">
+                        </li>
+                        <li>
+                            <label for="pd-pettime">养宠时间：</label>
+                            <input type="text" id="pd-pettime">
+                        </li>
+                        <li>
+                            <label for="pd-birth">宠物生日：</label>
+                            <input type="text" id="pd-birth">
+                        </li>
+                        <li>
+                            <label for="pd-tel">手机号码：</label>
+                            <input type="text" id="pd-tel">
+                            <button id="pd-getCode">获取验证码</button>
+                        </li>
+                        <li>
+                            <label for="pd-code">验证码：</label>
+                            <input type="text" id="pd-code">
+
+                        </li>
+                    </ul>
+                    <span id="pd-notice"></span>
+                    <div id="pd-save">保存</div>
+                </section>
+            </div>
+            <div id="headPortrait">
+                <canvas id="c1" width="300" height="300"></canvas>
+                <div id="head-box">
+                    <img src="" alt="" id="head-img">
+                    <div id="head-div1"></div>
+                </div>
+                <div id="head-btn">
+                <input type="file" name="files" id="f1" >
+                <input type="submit" value="提交" id="s1">
+                <input type="button" value="截取" id="btn1">
+                <input type="button" value="确定" id="btn2">
+                </div>
+            </div>
+        <div id="ma-box">
+            <header>
+                <span>我的收货地址</span>
+                <span id="ma-addaddr">新增收货地址</span>
+            </header>
+            <section>
+                <ul id="ma-ul">
+                    <!--<li>-->
+                        <!--<div class="ma-left">-->
+                            <!--<p><span class="ma-name">孙悟空</span><span class="ma-tel">17745351128</span></p>-->
+                            <!--<p><span class="ma-def">默认</span>四川省 成都市 武侯区 桂溪街道 天府二街1325号 高新青年公寓</p>-->
+                        <!--</div>-->
+                        <!--<div class="ma-right"><span>|</span>编辑</div>-->
+                    <!--</li>-->
+
+                </ul>
+            </section>
+        </div>
+        <div id="me-box">
+            <header>
+                <span>我的评价</span>
+                <div id="me-appraise">
+                    写评价
+                </div>
+            </header>
+            <section>
+                <ul id="me-ul">
+                    <!--<li>-->
+                        <!--<p class="me-word">狗狗爱吃也爱玩</p>-->
+                        <!--<img src="../images/me-pic1.jpg" height="103" width="100" class="me-pic"/>-->
+                        <!--<div>-->
+                            <!--<p class="me-goodsname">疯狂的小狗狗粮20kg金毛拉布拉多阿拉斯加中型大型成犬40斤通用型</p>-->
+                            <!--<p>单价：<span class="me-price">￥399</span>&nbsp;&nbsp;数量：<span class="me-number">1</span></p>-->
+                            <!--<p>小计：<span class="me-subtotal">￥399</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="isgood">已好评</span></p>-->
+                        <!--</div>-->
+                    <!--</li>-->
+
+                </ul>
+            </section>
+
+        </div>
+            <div id="cp-box">
+                <header>修改密码</header>
+                <section>
+                    <ul id="cp-ul">
+                        <li>
+                            <label for="cp-repass"><span>*</span>旧密码：</label>
+                            <input type="password" id="cp-repass">
+                        </li>
+                        <li>
+                            <label for="cp-newpass"><span>*</span>新密码：</label>
+                            <input type="password" id="cp-newpass">
+                        </li>
+                        <li>
+                            <label for="cp-conpass"><span>*</span>确认新密码：</label>
+                            <input type="password" id="cp-conpass">
+                        </li>
+                    </ul>
+                    <span id="cp-notice"></span>
+                    <div id="cp-confirm">确定</div>
+                    <div id="cp-cancel">取消</div>
+                </section>
+            </div>
+            <div id="sm-box">
+                <header>
+                    消息
+                </header>
+                <section>
+                    <ul id="sm-ul">
+
+                    </ul>
+                </section>
+            </div>
+            <div id="aa-box">
+                <header>
+                    <span >添加收货地址</span>
+                    <div id="aa-cancel">取消</div>
+                    <div id="aa-save">保存</div>
+                </header>
+                <section>
+                    <ul id="aa-ul">
+                        <li>
+                            <label for="aa-addname">收货人：</label>
+                            <input type="text" id="aa-addname">
+                        </li>
+                        <li>
+                            <label for="aa-addtel">电话号码：</label>
+                            <input type="text" id="aa-addtel">
+                        </li>
+                        <li>
+                            <div data-toggle="distpicker" id="newaddress">
+                            所在地区：<select id="newprovince"></select><!-- 省 -->
+                            <select id="newcity"></select><!-- 市 -->
+                            <select id="newcountry"></select><!-- 区/县 -->
+                        </div>
+                        </li>
+                        <li>
+                            <label for="aa-addr">详细收货地址：</label>
+                            <input type="text" id="aa-addr">
+                        </li>
+                    </ul>
+                        <input type="checkbox" id="aa-setdef">设为默认地址
+                </section>
+            </div>
+            <div id="ra-box">
+                <header>
+                    <span>编辑收货地址</span>
+                    <div id="ra-save">保存</div>
+                </header>
+                <section>
+                    <ul id="ra-ul">
+                        <li>
+                            <label for="ra-rename">收货人：</label>
+                            <input type="text" id="ra-rename">
+                        </li>
+                        <li>
+                            <label for="ra-retel">电话号码：</label>
+                            <input type="text" id="ra-retel">
+                        </li>
+                        <li>
+                            <div data-toggle="distpicker" id="address">
+                                所在地区：<select id="province"></select><!-- 省 -->
+                                <select id="city"></select><!-- 市 -->
+                                <select id="country"></select><!-- 区/县 -->
+                            </div>
+
+                        </li>
+                        <li>
+                            <label for="ra-redetail">详细收货地址：</label>
+                            <input type="text" id="ra-redetail">
+                        </li>
+                    </ul>
+                    <input type="checkbox" id="ra-setdef">设为默认地址
+                    <div id="ra-delete">删除地址</div>
+                </section>
+            </div>
+            <div id="wp-box">
+                <header>
+                    待付款
+                </header>
+                <section>
+                    <ul id="wp-ul">
+                        <li>
+                            <img src="../images/me-pic1.jpg" height="103" width="100"/>
+                            <div>
+                                <p>疯狂的小狗狗粮20kg金毛拉布拉多阿拉斯加中型大型成犬40斤通用型</p>
+                                <p>单价：<span class="wp-price">￥399</span>&nbsp;&nbsp;数量：<span class="wp-number">1</span></p>
+                                <p>小计：<span class="wp-subtotal">￥399</span></p>
+                            </div>
+                            <div>
+                                <div class="wp-pay">付款</div>
+                                <div class="wp-cancel">取消订单</div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/me-pic1.jpg" height="103" width="100"/>
+                            <div>
+                                <p>疯狂的小狗狗粮20kg金毛拉布拉多阿拉斯加中型大型成犬40斤通用型</p>
+                                <p>单价：<span class="wp-price">￥399</span>&nbsp;&nbsp;数量：<span class="wp-number">1</span></p>
+                                <p>小计：<span class="wp-subtotal">￥399</span></p>
+                            </div>
+                            <div>
+                                <div class="wp-pay">付款</div>
+                                <div class="wp-cancel">取消订单</div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="../images/me-pic1.jpg" height="103" width="100"/>
+                            <div>
+                                <p>疯狂的小狗狗粮20kg金毛拉布拉多阿拉斯加中型大型成犬40斤通用型</p>
+                                <p>单价：<span class="wp-price">￥399</span>&nbsp;&nbsp;数量：<span class="wp-number">1</span></p>
+                                <p>小计：<span class="wp-subtotal">￥399</span></p>
+                            </div>
+                            <div>
+                                <div class="wp-pay">付款</div>
+                                <div class="wp-cancel">取消订单</div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div id="wa-box">
+                <header>
+                    待评价
+                </header>
+                <section>
+                    <ul id="wa-ul">
+                        <!--<li>-->
+                            <!--<img src="../images/me-pic1.jpg" height="103" width="100"/>-->
+                            <!--<div>-->
+                                <!--<p>疯狂的小狗狗粮20kg金毛拉布拉多阿拉斯加中型大型成犬40斤通用型</p>-->
+                                <!--<p>单价：<span class="wa-price">￥399</span>&nbsp;&nbsp;数量：<span class="wa-number">1</span></p>-->
+                                <!--<p>小计：<span class="wa-subtotal">￥399</span></p>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--<div class="wa-appraise">评价</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+
+                    </ul>
+                </section>
+            </div>
+            <!--何静-->
+            <div id="seeGorder">
+                <p class="title2">订单信息</p>
+                <ul class="clearfix" id="see_showlist">
+                    <!--<li class="list1">
+                        <p class="title5">订单编号：<span>2018112720113</span></p>
+                        <ul class="clearfix">
+                            <li><img src="../images/Orderimmedtimg.jpg"></li>
+                            <li> <p class="title6">爱宠专用狗粮，去泪痕，促食欲，不生病，小型犬专用。</p></li>
+                            <li><p class="title4"><span>牛肉味</span><span>200g</span><span>x</span><span>1</span></p></li>
+                        </ul>
+                        <div class="liFoot">
+                            <span>实付款：</span>
+                            <span class="money2">￥39.00</span>
+                            <div class="seeOrderbtn confimTake">确认收货</div>
+                            <div class="seeOrderbtn applyReturn">申请退货</div>
+                            <div class="seeOrderbtn seeMove">查看物流</div>
+                        </div>
+                    </li>-->
+                </ul>
+                <!--退款的模态框-->
+                <div class="returnmodel">
+
+                    <div id="returnCenter" class="clearfix">
+                        <span class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                        <ul>
+                            <li >
+                                <div>
+                                    <span id="returngnoods" class="title3">退货退款</span>
+                                </div>
+                                <p class="title4">已收到货</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <span id="returnmoney" class="title3">仅退款</span>
+                                </div>
+                                <p class="title4">未收到货</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="orderdetail">
+                <div id="orderdetail2">
+                    <p class="title1">查看订单详情</p>
+                    <!--    <div id="datilhead" class="clearfix">
+                          <div class="first">
+                              <p class="title2">收货地址</p>
+                              <p id="orderAddr"><span>孙悟空</span><span>18565336925</span><span>四川省成都市武侯区天府三街253号</span></p>
+                          </div>
+                          <div class="second">
+                              <p class="title2">买家留言</p>
+                              <p id="orderSay">亲，请尽快发货哦！</p>
+                          </div>
+                      </div>
+                      <div id="goodli">
+                          <p class="title2">商品信息</p>
+                          <ul id="list1">
+                              <li id="title8">
+                                  <ul class="clearfix">
+                                      <li>&nbsp;</li>
+                                      <li>描述</li>
+                                      <li>购买数量</li>
+                                      <li>配送方式</li>
+                                      <li>金额</li>
+                                  </ul>
+                              </li>-->
+                    <!--       <li class="detaillist clearfix">
+                               <ul class="clearfix">
+                                   <li><img src="../images/orderImmeddma.jpg"></li>
+                                   <li class="descriptname">爱宠专用狗粮，去泪痕，促食欲</li>
+                                   <li class="buynum">1</li>
+                                   <li class="peisong">免邮</li>
+                                   <li class="money1">￥36.9</li>
+                               </ul>
+                           </li>-->
+                    <!--        <div class="liFoot clearfix">
+                                <p>订单编号：<span>7001</span></p>
+                                <span>实付款：</span>
+                                <span class="money2">￥39.00</span>
+                                <div class="seeOrderbtn" id="confimTake">确认收货</div>
+                                <div class="seeOrderbtn" id="applyReturn">申请退货</div>
+                                <div class="seeOrderbtn" id="seeMove">查看物流</div>
+                            </div>
+                        </ul>
+                    </div>-->
+                </div>
+                <!--退款的模态框-->
+                <div class="returnmodel">
+                    <div class="returnCenter" class="clearfix">
+                        <span class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                        <ul>
+                            <li >
+                                <div>
+                                    <span class="returngnoods" class="title3">退货退款</span>
+                                </div>
+                                <p class="title4">已收到货</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="returnmoney" class="title3">仅退款</span>
+                                </div>
+                                <p class="title4">未收到货</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="seeAllorder">
+                <p class="title2">全部订单</p>
+                <ul id="AllOrder">
+                    <!--  <li class="list1">
+                          <p class="title5">订单编号：<span>2018112720113</span></p>
+                          <ul class="clearfix">
+                              <li><img src="../images/Orderimmedtimg.jpg"></li>
+                              <li> <p class="title6">爱宠专用狗粮，去泪痕，促食欲，不生病，小型犬专用。</p></li>
+                              <li><p class="title4"><span>牛肉味</span><span>200g</span><span>x</span><span>1</span></p></li>
+                          </ul>
+                          <ul class="clearfix">
+                              <li><img src="../images/Orderimmedtimg2.jpg"></li>
+                              <li> <p class="title6">溜宠绳子，可爱，日常必备</p></li>
+                              <li><p class="title4"><span>蓝色波点</span><span>1.2m</span><span>x</span><span>1</span></p></li>
+                          </ul>
+                      </li>-->
+                </ul>
+
+            </div>
+            <div id="reason" class="clearfix">
+                <p class="title2">退款理由选择</p>
+                <div id="Reasoncenter">
+                    <p class="title5">选择理由</p>
+                    <div id="reason1">
+                        <p class="title6" id="reason3">
+                            <span id="selReson">狗狗走丢/送人/死亡</span>
+                            <span class="sel"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                        </p>
+                        <ul id="selReason">
+                            <li>不想买了</li>
+                            <li>狗狗走丢/送人/死亡</li>
+                            <li>拍错了，重新拍</li>
+                            <li>我发现还有更好的商品了</li>
+                        </ul>
+                    </div>
+                    <p class="title5">退款说明</p>
+                    <div id="reason2" contenteditable="true">
+                    </div>
+                </div>
+                <div id="subRaeson">
+                    提交
+                </div>
+            </div>
+            <div id="returnGoods">
+                <!--              <p class="title2">退货退款进度</p>
+                              <p class="title5">已提交申请，请等待审核，我们将会在1个工作日内审核。<span class="finished">审核成功！</span></p>
+                              <p class="title7">邮寄地址</p>
+                              <div class="explain clearfix">
+                                  <div>
+                                      <p id="Readdr">四川省成都市武侯区上层建筑88号</p>
+                                      <p id="Rename">刘东东</p>
+                                      <p id="Tel">18885623668</p>
+                                      <p class="peSong">本店拒收到付件，请买家自付邮寄费用！</p>
+                                  </div>
+                                  <div>
+                                      <p class="finished title5">请在三个工作日内寄出，超时将不再为您退款！</p>
+                                  </div>
+                              </div>
+                              <div id="writeNumber" class="clearfix">
+
+                              <div class="alreadysub">
+                                  <p class="title7">物流单号：</p>
+                                  <div id="returnnum">9128752365562112</div>
+                              </div>
+                              <div class="alreadysub">
+                                  <p class="title7">物流公司：</p>
+                                  <div id="returncompany">百世汇通</div>
+                              </div>
+
+                          </div>
+                              <p class="title7">等待到货</p>
+                              <p class="title8">我们成功收货后，将在三个工作日内退款给您，感谢您的支持！</p>
+                              <p class="title7">退款</p>
+                              <p class="title8">退款成功</p>-->
+            </div>
+            <div id="seemove">
+
+                <!--<p class="title2">快递公司：<span>'+order_com+'</span></p>\n' +
+                                            <p class="title2">快递单号：<span>'+order_num+'</span></p> <ul class="list">
+
+                                   <li>
+                                       <p>提交订单</p>
+                                       <p class="clearfix">
+                                           <span class="circle"></span>
+                                           <span class="circle3"></span>
+                                       </p>
+                                       <p>2018-12-03</p>
+                                       <p>17:20</p>
+                                   </li>
+                                   <li>
+                                       <p>提交订单</p>
+                                       <p class="clearfix">
+                                           <span class="circle"></span>
+                                           <span class="circle4"></span>
+                                       </p>
+                                       <p>2018-12-03</p>
+                                       <p>17:20</p>
+                                   </li>
+                                   <li>
+                                       <p>提交订单</p>
+                                       <p class="clearfix">
+                                           <span class="circle2"></span>
+                                           <span></span>
+                                       </p>
+                                       <p>2018-12-03</p>
+                                       <p>17:20</p>
+                                   </li>
+                               </ul>
+                               <p class="title2">订单处理信息</p>
+                               <ul class="list2">
+                                   <li class="title3">
+                                       <span class="time1">处理时间</span>
+                                       <span>处理消息</span>
+                                   </li>
+                                   <li>
+                                       <span class="time1">2018-12-03 &nbsp;&nbsp;10:56:05</span>
+                                       <span >您提交了订单</span>
+                                   </li>
+                                   <li>
+                                       <span class="time1">2018-12-03 &nbsp;&nbsp;10:56:05</span>
+                                       <span>您已支付</span>
+                                   </li>
+                               </ul>-->
+            </div>
+            <!--评价-->
+            <div id="goodsRecom">
+                <p class="title2">文字评价</p>
+                <div contenteditable="true" id="wordRecommend">
+                </div>
+                <!--        <p class="title2">图片评价</p>
+                        <div id="addComPic" class="clearfix">
+                            <img src="../images/addCommpic.png">
+                            <ul class="clearfix">
+                                <li><img src="../images/Orderimmedtimg2.jpg"></li>
+                                <li><img src="../images/Orderimmedtimg.jpg"></li>
+                            </ul>
+                        </div>-->
+                <ul class="cickStar">
+                    <li class="list1">
+                        <p class="title3"><span class="mustCheck">*</span>描述相符</p>
+                        <ul class="star" id="description">
+                            <li class="no"></li>
+                            <li class="no"></li>
+                            <li class="no"></li>
+                            <li class="no"></li>
+                            <li class="no"></li>
+                        </ul>
+                    </li>
+                    <li class="list1">
+                        <p class="title3"><span class="mustCheck">*</span>物流服务</p>
+                        <ul class="star" id="moveserver">
+                            <li class="no"></li>
+                            <li class="no"></li>
+                            <li class="no"></li>
+                            <li class="no"></li>
+                            <li class="no"></li>
+                        </ul>
+                    </li>
+                    <li class="list1">
+                        <p class="title3"><span class="mustCheck">*</span>综合评价</p>
+                        <ul class="star" id="multiple">
+                            <li class="no"></li>
+                            <li class="no"></li>
+                            <li class="no"></li>
+                            <li class="no"></li>
+                            <li class="no"></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <div id="subRecommend">
+                    提交
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<%-include footer.html%>
+</body>
+<script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js    "></script>
+<script src="dist/distpicker/js/distpicker.data.js"></script>
+<script src="dist/distpicker/js/distpicker.js"></script>
+<script src="js/personalCenter.js"></script>
+<script>
+</script>
+</html>

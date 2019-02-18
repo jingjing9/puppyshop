@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.chat {
+  width: 400px;
+  height: 700px;
+  position: fixed;
+  border: 2px solid #d91e25;
+  opacity: 0;
+  background-color: #fff;
+  transform: scale(0);
+  transition: all .5s ease-out;
+}
+/* body .transform{
+  opacity:1;
+  transform:scale(1);
+} */
+.chat .service-name {
+  width: 100%;
+  height: 40px;
+  background-color: #d91e25;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+.chat .chat-con {
+  width: 100%;
+  height: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #d91e25;
+  overflow: auto;
+}
+.chat .chat-con > div {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.chat .chat-con > div .head-portrait {
+  width: 40px;
+  height: 40px;
+  background-color: #888;
+}
+.chat .chat-con > div .head-portrait img{
+  width: 100%;
+  height: 100%;
+}
+.chat .chat-con > div .chat-box {
+  width: 250px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.chat .chat-con > div .chat-box p{
+  width: 100%;
+  word-wrap: break-word; 
+}
+.chat .chat-con .service-box .head-portrait,
+.chat .chat-con .service-box .chat-box {
+  float: left;
+}
+.chat .chat-con .user-box .head-portrait,
+.chat .chat-con .user-box .chat-box {
+  float: right;
+}
+.chat .user-input {
+  width: 100%;
+  height: 160px;
+  position: relative;
+}
+.chat .user-input textarea {
+  font-size: 16px;
+}
+.chat .user-input .user-val::placeholder {
+  font-size: 16px;
+  font-weight: bold;
+}
+.chat .user-input input {
+  float: right;
+  border: none;
+  width: 60px;
+  height: 30px;
+  color: #fff;
+  background-color: #d91e25;
+  cursor: pointer;
+  outline: none;
+  
+}
+.chat .user-input button{
+  float: left;
+  width: 60px;
+  height: 30px;
+  color: #fff;
+  background-color: #888;
+  border: none;
+  outline: none;
+
+}
+.chat .user-input .btn-li{
+  width: 120px;
+  float: right;
+}

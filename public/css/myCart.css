@@ -1,0 +1,151 @@
+#mc-box {
+    width: 960px;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto;
+}
+#mc-box header {
+    height: 30px;
+    width: 100%;
+    border-bottom: 1px solid #f1f3f5;
+    color: #3e3e3e;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}
+#mc-ul {
+    overflow: hidden;
+    color: #949494;
+}
+#mc-ul li {
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#mc-ul > li > p {
+    font-size: 14px;
+    line-height: 20px;
+    background: #f2f3f5;
+    text-indent: 2em;
+    margin-left: 74px;
+}
+.mc-right img {
+    float: left;
+    width: 100px;
+}
+#mc-ul div {
+    float: left;
+    font-size: 14px;
+}
+.mc-left {
+    text-align: center;
+    margin-left: 40px;
+    margin-top: 55px;
+}
+.mc-left span {
+    margin-left: 10px;
+}
+.mc-right {
+    margin-left: 40px;
+}
+.mc-det {
+    margin-left: 20px;
+}
+.mc-det p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mc-det p span {
+    color: #d91e25;
+    font-weight: 400;
+}
+.mc-add {
+    height: 25px;
+    width: 40px;
+    text-align: center;
+    line-height: 20px;
+    background: #f1f3f5;
+    color: #0f0f0f;
+    font-size: 20px;
+    cursor: pointer;
+}
+.mc-num {
+    height: 25px;
+    width: 95px;
+    color: #d91e25;
+    text-align: center;
+    line-height: 25px;
+}
+#mc-box li div i {
+    font-size: 18px;
+    color: #949494;
+    cursor: pointer;
+}
+.mc-sub {
+    height: 25px;
+    width: 40px;
+    text-align: center;
+    line-height: 20px;
+    background: #f1f3f5;
+    color: #0f0f0f;
+    font-size: 20px;
+    cursor: pointer;
+}
+.mc-operat {
+    margin-left: 400px;
+    margin-top: 50px;
+}
+#mc-box section {
+    overflow: hidden;
+}
+#mc-box section div {
+    float: left;
+}
+#mc-delete {
+    margin-left: 40px;
+    margin-top: 55px;
+    width: 70px;
+    height: 30px;
+    background: #f1f3f5;
+    color: #949494;
+    margin-left: 80px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+#mc-delete span {
+    margin-left: 10px;
+}
+#mc-box > section > div:nth-of-type(3) {
+    text-align: center;
+    margin-left: 40px;
+    margin-top: 55px;
+    margin-left: 500px;
+}
+#mc-box > section > div:nth-of-type(3) span {
+    margin-left: 10px;
+}
+#mc-box > section > div:nth-of-type(3) i {
+    color: #d91e25;
+    margin-right: 2px;
+}
+#mc-box > section > div:nth-of-type(3) div {
+    width: 130px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 2px;
+    margin-left: 20px;
+    margin-top: -10px;
+    float: right;
+    background: #ffcd04;
+    cursor: pointer;
+}
+#mc-checkall {
+    font-size: 16px;
+    color: #d91e25;
+}

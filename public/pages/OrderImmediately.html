@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/OrderImmediately.css">
+</head>
+<body>
+    <div id="big">
+        <div id="center">
+            <header></header>
+            <p class="title2">收货地址</p>
+            <div class="clearfix">
+                <div id="selAddr">
+                    <div>地址显示区</div>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                </div>
+                <div id="addBtn">+添加地址</div>
+            </div>
+
+            <p class="title2">商品信息</p>
+            <ul>
+                <li class="list1 clearfix">
+                   <ul>
+                       <li><img src="../images/Orderimmedtimg.jpg"></li>
+                       <li>
+                           <p class="title3">描述</p>
+                           <p class="title4">爱宠专用狗粮，去泪痕，促食欲，不生病，小型犬专用</p>
+                       </li>
+                       <li>
+                           <p class="title3">购买数量</p>
+                           <p class="num1">1</p>
+                       </li>
+                       <li>
+                           <p class="title3">配送方式</p>
+                           <p class="peSong">免邮</p>
+                       </li>
+                       <li>
+                           <p class="title3">金额</p>
+                           <p class="money1">￥36.9</p>
+                       </li>
+                   </ul>
+                </li>
+                <li class="list1">
+                    <ul>
+                        <li><img src="../images/Orderimmedtimg2.jpg"></li>
+                        <li>
+                            <p class="title3">描述</p>
+                            <p class="title4">爱宠专用狗粮，去泪痕，促食欲</p>
+                        </li>
+                        <li>
+                            <p class="title3">购买数量</p>
+                            <p class="num1">1</p>
+                        </li>
+                        <li>
+                            <p class="title3">配送方式</p>
+                            <p class="peSong">免邮</p>
+                        </li>
+                        <li>
+                            <p class="title3">金额</p>
+                            <p class="money1">￥36.9</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="title2">买家留言</p>
+            <div id="sleavMsg">
+                <input type="text" id="leavMsg1">
+                <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+            </div>
+            <div id="subFoot">
+                <span class="title3">合计：</span><span class="money2">￥36.9</span>
+                <div id="subOrder">提交订单</div>
+            </div>
+            <!--付款的模态框-->
+            <div class="paymodel">
+                <span id="close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                <p class="title1">扫码付款</p>
+                    <div id="payCenter">
+                        <p class="title3">扫码付款成功后<span>3</span>秒将自动跳转</p>
+                        <img src="../images/orderImmeddma.jpg">
+                        <p class="money2">￥36.9</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/OrderImmediately.js"></script>
+</html>

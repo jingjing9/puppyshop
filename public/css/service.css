@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#sv #box{
+    max-width: 1200px;
+    background-color: #ffffff;
+    margin-left:auto;
+    margin-right:auto;
+}
+#sv #boxsmall{
+    max-width: 960px;
+    background-color: #ffffff;
+    margin-left:auto;
+    margin-right:auto;
+}
+#sv header{
+    /*width: 98%;*/
+    background-color: white;
+    padding:15px 0 ;
+    font-size: 16px;
+    font-weight: bold;
+    color: #5f5f5f;
+    text-align: center;
+    /*text-indent: 2em;*/
+    /*border-bottom: 2px solid #ccc;*/
+}
+#sv .blank{
+    height: 110px;
+    background-color:white ;
+
+}
+#sv .hbuttom{
+    width: 260px;
+    height: 80px;
+    line-height: 40px;
+    /*margin-top: 5px;*/
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #5f5f5f;
+    text-align: center;
+   padding-top: 20px;
+    border: 1px solid #ccc;
+}
+
+#sv .img-responsive{
+    text-align:center ;
+}
+/*服务详情页*/
+#sv .bigtupian{
+    text-align: center;
+}
+#sv .longdetails{
+    width: 1000px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+#sv .hbuttom2{
+    width: 260px;
+    height: 80px;
+    line-height: 40px;
+    margin-top: 5px;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #5f5f5f;
+    text-align: center;
+    padding-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#sv .redprice{
+    width: 260px;
+    /*height: 80px;*/
+    line-height: 40px;
+    /*margin-top: 5px;*/
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: red;
+    text-align: center;
+    padding-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#sv .door{
+    width: 260px;
+    height: 80px;
+    line-height: 40px;
+    /*margin-top: 5px;*/
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#sv .createdd{
+    width: 260px;
+    /*height: 80px;*/
+    /*line-height: 40px;*/
+    /*margin-top: 5px;*/
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: black;
+    text-align: center;
+    /*padding-top: 20px;*/
+    margin-left:auto;
+    margin-right:auto;
+}
+#sv .checkpl{
+    width: 260px;
+    /*height: 80px;*/
+    /*line-height: 40px;*/
+    /*margin-top: 5px;*/
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: black;
+    text-align: center;
+    /*padding-top: 20px;*/
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#sv.tupian{
+    width: 260px;
+    height: 260px;
+
+}
+
+
+/*参考的服务评价表*/
+
+/*#me-ul > li {*/
+    /*margin-top: 10px;*/
+/*}*/
+/*#me-ul > li > p {*/
+    /*font-size: 14px;*/
+    /*line-height: 20px;*/
+    /*background: #f2f3f5;*/
+    /*text-indent: 2em;*/
+/*}*/
+/*#me-ul img {*/
+    /*float: left;*/
+/*}*/
+/*#me-ul > li > div {*/
+    /*height: 100px;*/
+    /*margin-left: 120px;*/
+/*}*/
+/*#me-ul > li > div p {*/
+    /*line-height: 30px;*/
+    /*font-size: 12px;*/
+    /*color: #949494;*/
+/*}*/
+/*#me-ul > li > div p span {*/
+    /*color: #d91e25;*/
+    /*font-size: 14px;*/
+
+
+/*实验田123*//*实验田123*//*实验田123*/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+}
+#home{
+    background: #f0f0f0;
+}
+.department-box{
+    max-width: 1168px;
+}
+.department-title{
+    font-size: 14px;
+    color: #5f5f5f;
+    font-weight: bold;
+    border-bottom:1px solid #ccc ;
+    padding: 15px 0;
+    text-indent: 2em;
+    background: #fff;
+}
+.department-header{
+    padding: 15px 0;
+}
+.department-tr td{
+    font-size: 12px;
+    font-weight: bold;
+}
+.department-footer{
+    padding: 5px 0;
+}
+.department-spn-right{
+    display: inline-block;
+    float: right;
+    margin-right: 81px;
+}
+.department-spn-left{
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+}
+span{
+    font-size: 12px;
+}
+.department-table{
+    background: #fff;
+}
+/*.department-spn-right button:hover{*/
+/*background: #4db358;*/
+/*color: white;*/
+/*}*/
+.department-condent{
+    width: 100%;
+    padding: 4px 0;
+    text-align: center;
+    margin: 10px 0;
+}
+.department-font{
+    width: 77px;
+    text-align:justify ;
+    font-size: 18px;
+}
+.department-add{
+    width: 70%;
+    height: 34px;
+    line-height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.department-select{
+    width: 70%;
+    height: 34px;
+    line-height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

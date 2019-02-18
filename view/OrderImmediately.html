@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://localhost:1234/dist/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="http://localhost:1234/css/reset.css">
+    <link rel="stylesheet" href="http://localhost:1234/font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost:1234/css/OrderImmediately.css">
+    <link rel="stylesheet" href="http://localhost:1234/css/index.css">
+</head>
+<body>
+
+    <div id="big">
+        <%-include header.html%>
+        <div id="center">
+            <p class="title2">收货地址</p>
+            <div class="clearfix" id="#Ordediv">
+                <div id="selAddr">
+                    <div id="hshowAddr"><span class="add_id" id="add_id"></span><span></span><span></span><span></span></div>
+                    <span id="selPreAddr"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <!--选择地址的模态框-->
+                    <div id="selAddrmodel">
+                        <% for(var i=0;i<addr.length;i++){%>
+                        <li><span class="add_id"><%=addr[i].add_id%></span><span ><%=addr[i].add_person%></span>&nbsp;&nbsp;<span><%=addr[i].add_tel%></span>&nbsp;&nbsp;<span><%=addr[i].a_address%></span></li>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+
+            <p class="title2">商品信息</p>
+            <ul>
+
+                <span id="user_id"><%=user_id%></span>
+                <% for(var i=0;i<data.length;i++){%>
+                           <li class="list1 clearfix">
+                               <ul>
+                                   <li>
+                                       <span class="goods_id"><%=data[i].goods_id%></span>
+                                       <img class="goods_pic1" src="http://localhost:1234<%=data[i].pic1%>"></li>
+                                   <li>
+                                       <p class="title3">描述</p>
+                                       <p class="title4 goods_name"><%=data[i].goods_name%></p>
+                                   </li>
+                                   <li>
+                                       <p class="title3">购买数量</p>
+                                       <p class="num1 c_num"><%=data[i].c_num%></p>
+                                   </li>
+                                   <li>
+                                       <p class="title3">配送方式</p>
+                                       <p class="peSong">免邮</p>
+                                   </li>
+                                   <li>
+                                       <p class="title3">金额</p>
+                                       <p class="money1">￥<span class="now_price"><%=data[i].now_price%>.00</span></p>
+                                   </li>
+                               </ul>
+                           </li>
+                           <%}%>
+
+            </ul>
+            <p class="title2">买家留言</p>
+            <div id="sleavMsg">
+                <input type="text" id="leavMsg1">
+                <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+            </div>
+            <div id="subFoot">
+                <span class="title3">合计：</span><span class="money2">￥
+                <% var sumPrice = 0; for(var i=0;i<data.length;i++){ sumPrice+=parseInt(data[i].now_price);}%>
+                <%=sumPrice%>.00
+            </span>
+                <div id="subOrder">提交订单</div>
+            </div>
+
+            <!--付款的模态框-->
+            <div class="paymodel">
+                <span id="close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                <p class="title1">扫码付款</p>
+                <div id="payCenter">
+                    <p class="title3">扫码付款成功后将自动跳转</p>
+                    <img src="http://localhost:1234/images/orderImmeddma.jpg">
+                    <p class="money2">￥<%=sumPrice%>.00</p>
+                </div>
+            </div>
+        </div>
+        <%-include footer.html%>
+    </div>
+</body>
+<script src="http://localhost:1234/js/orderImmediately.js"></script>
+</html>

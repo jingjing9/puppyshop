@@ -1,0 +1,46 @@
+#seeAllorder {
+  width: 960px;
+  box-sizing: border-box;
+  height: 500px;
+}
+#seeAllorder img {
+  width: 100px;
+  height: 100px;
+}
+#seeAllorder .list1 ul {
+  width: 930px;
+  height: 110px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+#seeAllorder .list1 ul li {
+  margin-left: 100px;
+  margin-top: 20px;
+  float: left;
+  width: 150px;
+  margin-right: 30px;
+}
+#seeAllorder .title2 {
+  font: bold 14px/30px Microsoft YaHei;
+  margin: 20px 0;
+}
+#seeAllorder .title4 {
+  font: 12px/20px Microsoft YaHei;
+  color: #949494;
+  line-height: 100px;
+}
+#seeAllorder .title4 span {
+  margin-right: 20px;
+}
+#seeAllorder .title5 {
+  height: 20px;
+  font: 12px/20px Microsoft YaHei;
+  margin-left: 20px;
+  background-color: #f1f3f5;
+}
+#seeAllorder .title6 {
+  padding-top: 20px;
+  box-sizing: border-box;
+  font: 12px/20px Microsoft YaHei;
+}
+/*# sourceMappingURL=seeAllorder.css.map */

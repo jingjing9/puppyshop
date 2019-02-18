@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/ProductList.css">
+    <link rel="stylesheet" href="../font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../dist/jquery-2.2.4.js"></script>
+</head>
+
+<body>
+<div class="site-topbar">
+    <div class="container">
+        <div class="topbar-cart">
+            <a id="shopcart" href="javascript:void(0);" class="cart-mini">
+                <i class="fa fa-shopping-cart cart-mini-i" aria-hidden="true"></i>
+                购物车
+            </a>
+        </div>
+        <div class="topbar-info">
+            <!--<a class="link contact-ser" id="wrap_zx">在线咨询</a>-->
+            <p id="nav_login" class="link">
+                <a href="http://localhost:1234/pages/login.html" class="link">登录</a>
+                <span class="sep">|</span>
+                <a href="http://localhost:1234/pages/login.html" class="link">注册</a>
+                <span class="sep">|</span>
+                <a href="" class="message">消息通知</a>
+            </p>
+        </div>
+    </div>
+
+</div>
+<nav class="site-header">
+    <div class="container">
+        <div class="header-logo">
+            <a class="logo" href="http://localhost:1234/pageone" ></a>
+        </div>
+        <div class="header-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="link" href="http://localhost:1234/pageone">首页</a>
+                    <ol class="nav-dropdown-list">
+
+                    </ol>
+                </li>
+
+                <li class="nav-item"><a id="oclothes" class="link" href="http://localhost:1234/pages/ProductList.html">宠物商城</a>
+                </li>
+                <!--<li class="nav-item"><a class="link" href="http://localhost:1234/pages/serviceAll.html">门店服务</a>-->
+                <!--<ol class="nav-dropdown-list">-->
+                <!--<li><a href="http://localhost:1234/pages/serviceHair.html">美容</a></li>-->
+                <!--<li><a href="http://localhost:1234/pages/serviceBath.html">洗澡</a></li>-->
+                <!--<li><a href="http://localhost:1234/pages/serviceCare.html">寄养</a></li>-->
+                <!--&lt;!&ndash;待开发&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="">摄影</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="">购宠咨询</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="">殡葬</a></li>&ndash;&gt;-->
+                <!--</ol>-->
+                <!--</li>-->
+                <li class="nav-item"><a class="link" href="http://localhost:1234/pages/com.html">宠物社区</a>
+                    <ol class="nav-dropdown-list"></ol>
+                </li>
+                <li id="myself" class="nav-item"><a  class="link" href="javascript:void(0);">个人中心</a>
+                    <ol class="nav-dropdown-list"></ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div id="wrap">
+        <div class="search clearfix">
+            <div class="commodity">
+                <div class="commodity-title">商品分类
+                    <ul class="commodity-list">
+                        <li class="thing">宠物用品
+                            <ul class="thing-list">
+                                <li class="costume">服饰</li>
+                                <li class="toy">玩具</li>
+                                <li class="thing">用品</li>
+                            </ul>
+                        </li>
+                        <li class="snacks">宠物零食
+                            <ul class="snacks-list">
+                                <li>主食</li>
+                                <li>零食</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="search-box">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" class="search-con" placeholder="请输入关键字">
+                <input type="button" value="搜索" class="search-btn">
+            </div>
+        </div>
+        <div class="paging clearfix">
+            <div class="right">
+                <!-- <span class="productList-num" style="margin-right: 20px;">共找到**件商品</span><span style="margin-right: 20px;">1/12</span>
+                <input type="button" value="上一页" class="top">
+                <input type="button" value="下一页" class="down"> -->
+            </div>
+        </div>
+        <div class="serp">
+            <div class="serp-result">
+
+                <!-- <div class="serp-list">
+                    <div class="center">
+                        <div class="img">
+                            <img src="../images/2.jpg">
+                        </div>
+                        <p class="notice">2018年新款 妮可威尔 华夫格休闲亲自外套 狗狗装 黑色 M号</p>
+                        <p class="price clearfix"><del>¥167.70</del><span>¥77.40</span></p>
+                        <p class="sales">**人已购买</p>
+                    </div>
+                </div> -->                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/commodity.js"></script>
+
+</html>

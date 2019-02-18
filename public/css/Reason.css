@@ -1,0 +1,77 @@
+#reason {
+  width: 960px;
+  box-sizing: border-box;
+}
+#reason .title2 {
+  font: bold 14px/30px Microsoft YaHei;
+  margin: 20px 0;
+}
+#reason #Reasoncenter {
+  width: 600px;
+  margin: 0 auto;
+}
+#reason #reason1 {
+  width: 500px;
+  height: 66px;
+  background-color: #f1f3f5;
+  position: relative;
+  margin: 0 auto;
+}
+#reason #reason1 p {
+  color: #949494;
+  line-height: 66px;
+  text-align: center;
+}
+#reason #reason1 #selReason {
+  width: 500px;
+  display: none;
+  font: 12px/40px Microsoft YaHei;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 3px 3px #f1f3f5;
+  position: absolute;
+  left: 0;
+  top: 65px;
+}
+#reason #reason1 #selReason li {
+  height: 40px;
+}
+#reason #reason1 #selReason li:hover {
+  color: #d91e25;
+  box-shadow: 1px 1px 3px 3px #f1f3f5;
+}
+#reason #reason1 .sel {
+  display: block;
+  float: right;
+  margin-right: 20px;
+  font: 16px/66px Microsoft YaHei;
+}
+#reason .title6 {
+  font: 12px/20px Microsoft YaHei;
+}
+#reason .title5 {
+  margin: 20px auto;
+  font: 12px/20px Microsoft YaHei;
+}
+#reason #reason2 {
+  width: 500px;
+  height: 108px;
+  background-color: #f1f3f5;
+  margin: 0 auto;
+  font: 12px/32px Microsoft YaHei;
+}
+#reason #subRaeson {
+  float: right;
+  color: #ffffff;
+  width: 132px;
+  height: 45px;
+  border-radius: 6px;
+  text-align: center;
+  font: bold 14px/45px Microsoft YaHei;
+  background-color: #d91e25;
+  margin: 20px;
+}
+#reason #subRaeson:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=Reason.css.map */

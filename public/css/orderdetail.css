@@ -1,0 +1,184 @@
+#orderdetail {
+  width: 960px;
+  box-sizing: border-box;
+}
+#orderdetail .title1 {
+  font: bold 16px/40px Microsoft YaHei;
+  text-align: center;
+}
+#orderdetail .title2 {
+  font: bold 14px/30px Microsoft YaHei;
+  text-align: left;
+}
+#orderdetail #datilhead {
+  width: 930px;
+  height: 70px;
+}
+#orderdetail #datilhead div {
+  float: left;
+  height: 70px;
+}
+#orderdetail #datilhead .first {
+  width: 600px;
+}
+#orderdetail #datilhead .first #orderAddr {
+  color: #949494;
+  text-align: center;
+}
+#orderdetail #datilhead .first #orderAddr span {
+  display: inline-block;
+  font: 12px/40px Microsoft YaHei;
+  margin-right: 20px;
+}
+#orderdetail #datilhead .second {
+  width: 300px;
+}
+#orderdetail #datilhead .second #orderSay {
+  font: 12px/40px Microsoft YaHei;
+  text-align: center;
+  color: #ffcd04;
+}
+#orderdetail #goodli {
+  border-top: 1px solid #f1f3f5;
+  font: 12px/20px Microsoft YaHei;
+}
+#orderdetail #goodli #list1 .detaillist {
+  margin-top: 20px;
+  width: 930px;
+  height: 150px;
+  padding-top: 40px;
+  box-sizing: border-box;
+  font: 12px/20px Microsoft YaHei;
+}
+#orderdetail #goodli #list1 .detaillist .descriptname {
+  color: #949494;
+}
+#orderdetail #goodli #list1 .detaillist .buynum {
+  color: #d91e25;
+  font-size: 14px;
+}
+#orderdetail #goodli #list1 .detaillist .peisong {
+  color: #ffcd04;
+}
+#orderdetail #goodli #list1 .detaillist .money1 {
+  font-size: 16px;
+  color: #949494;
+}
+#orderdetail #goodli #list1 ul li {
+  float: left;
+  width: 120px;
+  margin-right: 50px;
+  text-align: center;
+}
+#orderdetail #goodli #list1 ul li img {
+  width: 100px;
+  height: 100px;
+}
+#orderdetail .liFoot {
+  text-align: right;
+  margin-top: 20px;
+  font: 12px/34px Microsoft YaHei;
+}
+#orderdetail .liFoot p {
+  float: left;
+}
+#orderdetail .liFoot .money2 {
+  color: #d91e25;
+  font: bold 18px/30px Microsoft YaHei;
+  margin-right: 20px;
+}
+#orderdetail .liFoot div {
+  float: right;
+  width: 85px;
+  height: 34px;
+  margin-right: 20px;
+  border-radius: 6px;
+  background-color: #f1f3f5;
+  text-align: center;
+}
+#orderdetail .liFoot div:hover {
+  color: #ffffff;
+  background-color: #d91e25;
+  box-shadow: 1px 1px 2px 2px #949494;
+}
+#orderdetail .liFoot .return {
+  color: #ffffff;
+  background-color: #ffcd04;
+}
+#orderdetail .liFoot .confimTake {
+  color: #ffcd04;
+}
+#orderdetail .returnmodel {
+  width: 100%;
+  height: 800px;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  box-sizing: border-box;
+}
+#orderdetail .returnmodel #returnCenter {
+  width: 600px;
+  height: 400px;
+  margin: 100px auto;
+  background-color: #ffffff;
+  padding-top: 50px;
+  box-sizing: border-box;
+  position: relative;
+}
+#orderdetail .returnmodel #returnCenter .close {
+  display: block;
+  font: bold 26px Microsoft YaHei;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+#orderdetail .returnmodel #returnCenter ul {
+  width: 600px;
+  height: 400px;
+}
+#orderdetail .returnmodel #returnCenter li {
+  float: left;
+  width: 200px;
+  height: 250px;
+  margin-right: 100px;
+}
+#orderdetail .returnmodel #returnCenter li .title4 {
+  text-align: center;
+  font: 12px/20px Microsoft YaHei;
+  color: #949494;
+}
+#orderdetail .returnmodel #returnCenter li div {
+  width: 120px;
+  height: 27px;
+  margin: 100px auto 20px auto;
+  background-color: #f1f3f5;
+}
+#orderdetail .returnmodel #returnCenter li div:hover {
+  color: #ffcd04;
+}
+#orderdetail .returnmodel #returnCenter li div .title3 {
+  font: bold 12px/24px Microsoft YaHei;
+}
+#orderdetail .returnmodel #returnCenter li div #returngoods:before {
+  content: "";
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+  width: 24px;
+  height: 23px;
+  background-image: url("../images/returnsprits.jpg");
+}
+#orderdetail .returnmodel #returnCenter li div #returnmoney:before {
+  content: "";
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+  width: 24px;
+  height: 23px;
+  background-image: url("../images/returnsprits.jpg");
+  background-position: 0 25px;
+}
+/*# sourceMappingURL=orderdetail.css.map */

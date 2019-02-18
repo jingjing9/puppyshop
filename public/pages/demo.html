@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        select{
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+    </style>
+    <script src="../dist/jquery-2.2.4.js"></script>
+    <script src="../dist/distpicker.js"></script>
+</head>
+<body>
+<div data-toggle="distpicker" id="address">
+    <select class="province"></select><!-- 省 -->
+    <select></select><!-- 市 -->
+    <select></select><!-- 区/县 -->
+</div>
+<button id="btn">点击</button>
+</body>
+
+<script>
+    $.fn.distpicker.setDefaults({
+        autoSelect: false,
+        province: '请选择省 ',  //修改select框默认文字
+        city: '请选择市',
+        district: '请选择区/县'
+    });
+    $('#address').distpicker('reset');  //或
+    $('#address').distpicker('reset', true);
+    // destroy();  //销毁插件实例。
+    function addressChange(id){;
+        var first=$('#'+id).find('select:first-child');   //获取select框
+        var second=$('#'+id).find('select:first-child').next();
+        var third=$('#'+id).find('select:last-child');
+        //上面这段也可以改为select:eq(0)这种形式
+
+        var firstCode=first.find('option:selected').attr('data-code');  //获取被选中的option的属性值
+        var secondCode=second.find('option:selected').attr('data-code');
+        var thirdCode=third.find('option:selected').attr('data-code');
+
+        var code="";
+        if(third.find('option:selected').index() != 0){   //如果第3个select被选中,返回第3个的值
+            code=thirdCode;
+        }else{
+            if(second.find('option:selected').index() != 0){  //如果第2个select被选中,返回第2个的值
+                code=secondCode;
+            }else{
+                code=firstCode;
+            }
+        };
+        return code;//返回最终获取的code码
+    };
+    function address(editId,code){
+        var first=$('#'+editId).find('select:first-child');   //获取select框
+        var second=$('#'+editId).find('select:first-child').next();
+        var third=$('#'+editId).find('select:last-child');
+
+        var province = code.substr(0,2)+'0000';  //省
+        var city = code.substr(0,4)+'00';   //市
+        var district = code.substr(0,6);   //区/县
+
+        first.find('option[data-code="'+province+'"]').attr("selected","selected").trigger('change');
+        second.find('option[data-code="'+city+'"]').attr("selected","selected").trigger('change');
+        third.find('option[data-code="'+district+'"]').attr("selected","selected").trigger('change');
+    }
+
+</script>
+</html>

@@ -1,0 +1,11 @@
+{
+    "data":[
+        {"title":"猫1","link":"http://www.taobao.com","num":4,"img":"http://localhost:1234/images/banner4.jpg"},
+        {"title":"猫2","link":"http://www.taobao.com","num":3,"img":"http://localhost:1234/images/banner6.jpg"},
+        {"title":"猫3","link":"http://www.taobao.com","num":4,"img":"http://localhost:1234/images/banner5.jpg"},
+        {"title":"猫4","link":"http://www.taobao.com","num":1,"img":"http://localhost:1234/images/banner2.jpg"}
+
+    ]
+}
+
+

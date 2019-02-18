@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>未使用服务订单</title>
+    <link rel="stylesheet" href="../dist/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/service.css">
+    <script src="../dist/jquery-2.2.4.js"></script>
+    <script src="../dist/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../js/service.js"></script>
+</head>
+
+<body id="sv">
+
+<div id="boxsmall">
+    <header>未使用服务订单</header>
+    <div class="blank"></div>
+
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+
+    <div class="department-box">
+        <!--<div class="department-title">我的订单</div>-->
+        <!--<div class="department-header">-->
+            <!--<div class="row">-->
+                <!--<div class="col-lg-3">-->
+                    <!--<div class="input-group">-->
+                        <!--<input type="text" class="form-control" placeholder="编号/名称" id="findinput">-->
+                    <!--<span class="input-group-btn">-->
+                        <!--<button class="btn btn-info" type="button"><span class="glyphicon glyphicon-search"></span></button>-->
+                    <!--</span>-->
+                    <!--</div>&lt;!&ndash; /input-group &ndash;&gt;-->
+                <!--</div>&lt;!&ndash; /.col-lg-6 &ndash;&gt;-->
+                <!--<div class="col-lg-1" >-->
+                    <!--<div class="input-group">-->
+                        <!--<button class="btn btn-info" type="button" id="addto" data-toggle="modal" data-target="#add"><span class="glyphicon glyphicon-plus"></span> <span></span></button>-->
+                    <!--</div>&lt;!&ndash; /input-group &ndash;&gt;-->
+                <!--</div>&lt;!&ndash; /.col-lg-6 &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /.row &ndash;&gt;-->
+        <!--</div>-->
+
+        <div class="department-table">
+            <table class=" table table-hover " id="Row">
+                <thead>
+                <tr class="department-tr">
+
+                    <td>状态</td>
+                    <td>图片</td>
+                    <td>名字</td>
+                    <td>门店</td>
+                    <td>消费券码</td>
+                    <td>价格</td>
+                    <!--<td>评论</td>-->
+                    <!--<td>查看人员</td>-->
+                </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!--<div class="department-footer">-->
+        <!--<span class="department-spn-left">-->
+        <!--<button class="btn btn-Default" id="all"><span>全选</span></button>-->
+        <!--<button class="btn btn-Default" id="exit"><span>取消</span></button>-->
+        <!--<button class="btn btn-Default" id="back"><span>反选</span></button>-->
+        <!--</span>-->
+
+        <!--<span class="department-spn-right">-->
+        <!--<button class="btn btn-Default" id="department-btn-left"><span class="glyphicon glyphicon-chevron-left"></span></button>-->
+        <!--<button class="btn btn-Default" name="btn">1</button>-->
+        <!--<button class="btn btn-Default" name="btn">2</button>-->
+        <!--<button class="btn btn-Default" name="btn">3</button>-->
+        <!--<button class="btn btn-Default" name="btn">4</button>-->
+        <!--<button class="btn btn-Default" name="btn">5</button>-->
+        <!--<button class="btn btn-Default" id="department-btn-right"><span class='glyphicon glyphicon-chevron-right'></span></button>-->
+        <!--</span>-->
+        <!--</div>-->
+        <!--删除弹框-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+
+                <div class="modal-content" >
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                        <h4 class="modal-title" id="myModalLabel">删除服务订单</h4>
+                    </div>
+                    <div class="modal-body" id="prompt">
+                        <span>确定立刻删除此条服务订单吗? 如果确定删除，将不收取任何费用，并将退款返回到你的银行账户。</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-primary" id="del">确定</button>
+                        <button type="button" data-dismiss="modal" class="btn btn-default" >取消</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!--编辑弹框-->
+        <div class="modal fade" id="test" tabindex="-1" role="dialog" data-dismiss="modal" aria-labelledby="myTest">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                        <h4 class="modal-title" id="myTest">修改部门</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="department-condent">
+                            <span class="department-font">编 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号:</span><input class="department-add number" type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">部门名称:</span><input class="department-add name" type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">部门描述:</span><input class="department-add department-description " type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">部门人数:</span><input class="department-add department-people" type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">部门主管:</span>
+                            <select name="" id="" class="department-select" >
+                                <option value="">何静</option>
+                                <option value="">钟毅</option>
+                                <option value="">苏建建</option>
+                                <option value="">唐开峰</option>
+                                <option value="">鲁佳益</option>
+                                <option value="">杨子弋</option>
+                            </select>
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">联系方式:</span> &nbsp;&nbsp;<input class="department-add department-phone" type="text">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-primary" id="edit-save">保存</button>
+                        <button type="button" data-dismiss="modal" class="btn btn-default">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--新增弹框-->
+        <div class="modal fade " id="add" tabindex="-1" role="dialog" data-dismiss="modal" aria-labelledby="adddepartment">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                        <h4 class="modal-title" id="adddepartment">新增服务订单</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="department-condent">
+                            <span class="department-font">编 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号:</span> &nbsp;&nbsp;<input class="department-add number1" type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">部门名称:</span> &nbsp;&nbsp;<input class="department-add name1" type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">部门描述:</span> &nbsp;&nbsp;<input class="department-add department-description1 " type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">部门人数:</span> &nbsp;&nbsp;<input class="department-add department-people1" type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">部门主管:</span> &nbsp;&nbsp;<input class="department-add department-admin1" type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">联系方式:</span> &nbsp;&nbsp;<input class="department-add department-phone1" type="text">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-primary" id="save">保存</button>
+                        <button type="button" data-dismiss="modal" class="btn btn-default">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--查看信息-->
+        <div class="modal fade " id="View" tabindex="-1" role="dialog" data-dismiss="modal" aria-labelledby="adddepartment">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                        <h4 class="modal-title">部门信息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="department-condent">
+                            <span class="department-font">编 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号:</span> &nbsp;&nbsp;<input class="department-add number2" type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">部门名称:</span> &nbsp;&nbsp;<input class="department-add name2" type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">部门描述:</span> &nbsp;&nbsp;<input class="department-add department-description2 " type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">部门人数:</span> &nbsp;&nbsp;<input class="department-add department-people2" type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">部门主管:</span> &nbsp;&nbsp;<input class="department-add department-admin2" type="text">
+                        </div>
+                        <div class="department-condent">
+                            <span class="department-font">联系方式:</span> &nbsp;&nbsp;<input class="department-add department-phone2" type="text">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" data-dismiss="modal" class="btn btn-default">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!--不能de动-->
+
+
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+
+    <!--点图片选择服务-->
+
+
+    <!--<div class="am-table table-responsive">-->
+        <!--<table class="table table-hover">-->
+            <!--&lt;!&ndash;<thead class="am-font1">&ndash;&gt;-->
+            <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>待使用</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<p class="tupian">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<img src="../images/无法显示.PNG" class="img-responsive"width="100px"height="100px"></p></td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>大狗洗澡</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>春熙路店</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>消费卷码：JKEKDH231241JSJSJ</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="col-lg-12" style="color: red">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<h4>&ndash;&gt;-->
+                            <!--&lt;!&ndash;99￥&ndash;&gt;-->
+                        <!--&lt;!&ndash;</h4>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td><button type="submit" class="btn btn-info" style="width: 80px;background-color: #ffcd04;border: none">立即取消</button></td>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+            <!--&lt;!&ndash;</thead>&ndash;&gt;-->
+            <!--<tbody class="am-font2">-->
+
+            <!--</tbody>-->
+        <!--</table>-->
+    <!--</div>-->
+
+
+    <!--&lt;!&ndash;<div class="am-table table-responsive">&ndash;&gt;-->
+        <!--&lt;!&ndash;<table class="table table-hover">&ndash;&gt;-->
+            <!--&lt;!&ndash;<thead class="am-font1">&ndash;&gt;-->
+            <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>已使用</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td><p class="tupian"><img src="../images/无法显示.PNG" class="img-responsive"width="100px"height="100px"></p></td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>小狗洗澡</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>世纪城店</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>消费卷码：JKEKDH231241JSJSJ</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="col-lg-12" style="color: red">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<h4>&ndash;&gt;-->
+                            <!--&lt;!&ndash;59￥&ndash;&gt;-->
+                        <!--&lt;!&ndash;</h4>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td><button type="submit" class="btn btn-info" style="width: 80px;background-color: #ffcd04;border: none">立即取消</button></td>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+            <!--&lt;!&ndash;</thead>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<tbody class="am-font2">&ndash;&gt;-->
+
+            <!--&lt;!&ndash;</tbody>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;</table>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;点图片选择服务&ndash;&gt;-->
+
+    <!--点图片选择服务-->
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+#seemove {
+  width: 960px;
+  height: 600px;
+  padding: 15px;
+  border: solid 1px red;
+  box-sizing: border-box;
+}
+#seemove .title2 {
+  font: bold 14px/30px Microsoft YaHei;
+  margin: 20px 0;
+}
+#seemove .list {
+  width: 930px;
+  height: 100px;
+}
+#seemove .list li {
+  width: 120px;
+  float: left;
+  line-height: 24px;
+}
+#seemove .list li p {
+  font: 12px/30px Microsoft YaHei;
+  color: #ffcd04;
+}
+#seemove .list li p span {
+  display: block;
+  height: 23px;
+  float: left;
+  background-repeat: no-repeat;
+}
+#seemove .list li .circle {
+  width: 24px;
+  background-image: url("../images/seemovesprits1.jpg");
+  background-position: 0 0;
+}
+#seemove .list li .circle2 {
+  width: 24px;
+  background-image: url("../images/seemovesprits2.jpg");
+  background-position: -96px 1px;
+}
+#seemove .list li .circle3 {
+  width: 94px;
+  background-image: url("../images/seemovesprits1.jpg");
+  background-position: -24px 0;
+}
+#seemove .list li .circle4 {
+  width: 94px;
+  background-image: url("../images/seemovesprits2.jpg");
+  background-position: 0 2px;
+}
+#seemove .list2 {
+  width: 930px;
+}
+#seemove .list2 li {
+  width: 930px;
+  height: 30px;
+  border-bottom: 1px #f1f3f5 solid;
+  font-size: 12px;
+  color: #d91e25;
+}
+#seemove .list2 li span {
+  display: inline-block;
+  width: 600px;
+}
+#seemove .list2 li .time1 {
+  width: 300px;
+  margin-right: 20px;
+}
+#seemove .title3 {
+  font: 14px/30px Microsoft YaHei;
+  margin: 20px 0;
+}
+#seemove .title3 span {
+  color: black;
+}
+/*# sourceMappingURL=seemove.css.map */

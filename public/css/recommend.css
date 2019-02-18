@@ -1,0 +1,79 @@
+#goodsRecom {
+  width: 960px;
+  border: 1px solid red;
+  padding: 15px;
+  box-sizing: border-box;
+}
+#goodsRecom .title2 {
+  font: bold 14px/30px Microsoft YaHei;
+  margin: 20px 0;
+}
+#goodsRecom #wordRecommend {
+  width: 900px;
+  height: 60px;
+  line-height: 30px;
+  background-color: #f1f3f5;
+  margin-left: 20px;
+  text-indent: 2em;
+  color: #ffcd04;
+  font: 14px/30px Microsoft YaHei;
+}
+#goodsRecom #addComPic {
+  margin-left: 20px;
+}
+#goodsRecom #addComPic img {
+  width: 100px;
+  height: 100px;
+}
+#goodsRecom #addComPic ul {
+  width: 800px;
+  height: 100px;
+  float: right;
+}
+#goodsRecom #addComPic ul li {
+  float: left;
+  width: 120px;
+  margin-right: 50px;
+}
+#goodsRecom .cickStar .list1 {
+  float: left;
+  width: 170px;
+  height: 150px;
+  margin: 20px 40px;
+  text-align: center;
+}
+#goodsRecom .cickStar .list1 .mustCheck {
+  color: #d91e25;
+  font: bold 16px/30px Microsoft YaHei;
+}
+#goodsRecom .cickStar .list1 .star {
+  width: 170px;
+  height: 30px;
+  margin: 0 auto;
+}
+#goodsRecom .cickStar .list1 .star li {
+  width: 24px;
+  margin: 0 4px;
+  float: left;
+}
+#goodsRecom .cickStar .list1 .star li img {
+  width: 24px;
+  height: 24px;
+}
+#goodsRecom .cickStar .title3 {
+  text-align: center;
+  font: bold 12px/30px Microsoft YaHei;
+  margin: 20px auto;
+}
+#goodsRecom #subRecommend {
+  float: right;
+  color: #ffffff;
+  width: 132px;
+  height: 45px;
+  border-radius: 6px;
+  text-align: center;
+  margin-right: 20px;
+  font: bold 14px/45px Microsoft YaHei;
+  background-color: #d91e25;
+}
+/*# sourceMappingURL=recommend.css.map */
